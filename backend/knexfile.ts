@@ -1,7 +1,6 @@
 // Update with your config settings.
 
 module.exports = {
-
   development: {
     client: 'mysql2',
     connection: {
@@ -20,35 +19,36 @@ module.exports = {
   },
 
   staging: {
-    client: "postgresql",
+    client: 'mysql2',
     connection: {
-      database: "my_db",
-      user: "username",
-      password: "password"
+      host: 'localhost',
+      user: 'root',
+      password: 'root',
+      database: 'a_educar'
     },
-    pool: {
-      min: 2,
-      max: 10
-    },
+    useNullAsDefault: true,
     migrations: {
-      tableName: "knex_migrations"
+      directory: './src/database/migrations'
+    },
+    seeds: {
+      directory: './src/database/seeds'
     }
   },
 
   production: {
-    client: "postgresql",
+    client: 'mysql2',
     connection: {
-      database: "my_db",
-      user: "username",
-      password: "password"
+      host: 'localhost',
+      user: 'root',
+      password: 'root',
+      database: 'a_educar'
     },
-    pool: {
-      min: 2,
-      max: 10
-    },
+    useNullAsDefault: true,
     migrations: {
-      tableName: "knex_migrations"
+      directory: './src/database/migrations'
+    },
+    seeds: {
+      directory: './src/database/seeds'
     }
   }
-
 };
