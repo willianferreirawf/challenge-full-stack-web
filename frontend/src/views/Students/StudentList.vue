@@ -48,5 +48,5 @@ import api from "../../services/api";
       .catch((error) => console.error(error));
   },
 })
-export default class Students extends Vue {}
+export default class StudentList extends Vue {}
 </script>
